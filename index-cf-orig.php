@@ -64,16 +64,14 @@ function getRequestIP() {
     }
 }
 ?>
-
 <?php
-
 $ip = getRequestIP();
-// $cf = isCloudflare();
+$cf = isCloudflare();
 
-// if($cf) echo "Cloudflare :D<br>";
-// else    echo "Not cloudflare o_0";
+if($cf) echo "Cloudflare :D<br>";
+else    echo "Not cloudflare o_0";
 
-// return $ip;
+return $ip;
 if (isset($ip)) {
   echo $ip;
   }

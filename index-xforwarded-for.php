@@ -48,7 +48,7 @@ function _cloudflare_Requests_Check() {
 }
 
 function isCloudflare() {
-    $ipCheck        = _cloudflare_CheckIP($_SERVER['X-Forwarded-For']);
+    $ipCheck        = _cloudflare_CheckIP($_SERVER['X-Forwarded-For']); //Changed to look at the X-Forwarded-For header set by the webserver
     $requestCheck   = _cloudflare_Requests_Check();
     return ($ipCheck && $requestCheck);
 }
